@@ -1,0 +1,29 @@
+{% load staticfiles %}
+{% load static %}
+
+{% block header %}
+	<div class="navbar navbar-default navbar-inverse navbar-fixed-top desktop">
+	    <div class="container">
+            <div class="navbar-header">
+
+	            <ul class="nav navbar-nav">
+                    <li><a href="" class="menu-poll">Design Plans</a></li>
+                    <li><a href="" class="menu-poll">Map</a></li>
+	            </ul>
+	        </div>
+
+	        <div class="navbar-collapse collapse" id="navbar-main">
+	            {% if user.is_authenticated %}
+		            <li id='user-logged' class="dropdown nav navbar-nav navbar-right">
+						<ul class="dropdown-menu">
+							<li><a href="" class="menu-backoffice"><i class="fa fa-cog"></i> Backoffice</a></li>
+							<li><a href="" class="menu-backoffice">Sign Out</a></li>
+						</ul>
+					</li>
+	            {% endif %}
+	       </div>
+	    </div>
+	</div>
+
+
+{% endblock header %}
